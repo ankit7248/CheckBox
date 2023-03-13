@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <TextView
+      android:id="@+id/tvQuestion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="what do you want on your burger?"
+      android:textAllCaps="true"
+      android:textColor="#020000"
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Nonveg"
+    app:layout_constraintTop_toBottomOf="@+id/tvQuestion">
+
+  <RadioGroup
+      android:id="@+id/rgMeat"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvQuestion">
+
+
+    <RadioButton
+        android:id="@+id/rbBeef"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Beef"
+        android:checked="true"
+        tools:layout_editor_absoluteX="27dp"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <RadioButton
+        android:id="@+id/rbChicken"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Chicken"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <RadioButton
+        android:id="@+id/Pork"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pork"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+
+  </RadioGroup>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Veg"
+  app:layout_constraintTop_toBottomOf="@+id/Nonveg">
+
+
+  <CheckBox
+      android:id="@+id/Cheese"
+      android:layout_width="fill_parent"
+      android:layout_weight="1"
+      android:layout_height="wrap_content"
+      android:text="Cheese"
+      />
+
+  <CheckBox
+      android:id="@+id/Onion"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Onion"
+      />
+
+  <CheckBox
+      android:id="@+id/Salad"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Salad"
+      />
+
+
+</LinearLayout>
+
+
+  <Button
+      android:id="@+id/btnOrder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="#E11F1F"
+      android:text="Order"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Veg" />
+
+  <TextView
+      android:id="@+id/tvOrder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="cursive"
+      android:textColor="#05AF0D"
+      android:textSize="50sp"
+      android:hint="Output"
+      android:layout_marginStart="10dp"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnOrder" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
